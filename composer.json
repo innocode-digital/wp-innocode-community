@@ -1,0 +1,16 @@
+{
+  "name": "innocode-digital/wp-innocode-community",
+  "version": "0.0.1",
+  "type": "wordpress-muplugin",
+  "license": "GPL-2.0+",
+  "require": {
+    "php": ">=7.1",
+    "composer/installers": "~1.0"
+  },
+  "description": "Helps to integrate Innocode Community with a site.",
+  "autoload": {
+    "psr-4": {
+      "Innocode\\Community\\": "src/"
+    }
+  }
+}
