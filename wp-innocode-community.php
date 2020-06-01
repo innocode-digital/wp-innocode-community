@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Community
  * Description: Helps to integrate <a href="https://innocode.com/product/community/">Innocode Community</a> with a site.
- * Version: 0.0.1
+ * Version: 0.1.0
  * Author: Innocode
  * Author URI: https://innocode.com
  * Tested up to: 5.4.1
@@ -36,7 +36,7 @@ if ( ! function_exists( 'innocode_community' ) ) {
 
         if ( is_null( $innocode_community ) ) {
             trigger_error(
-                'Missing required constant INNOCODE_COMMUNITY_INSTANCE_URL and/or INNOCODE_COMMUNITY_CONSUMER_TOKEN.',
+                'Missing required constants INNOCODE_COMMUNITY_INSTANCE_URL and/or INNOCODE_COMMUNITY_CONSUMER_TOKEN.',
                 E_USER_ERROR
             );
         }
