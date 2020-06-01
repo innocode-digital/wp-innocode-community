@@ -5,6 +5,7 @@
   "license": "GPL-2.0+",
   "require": {
     "php": ">=7.1",
+    "ext-json": "*",
     "composer/installers": "~1.0"
   },
   "description": "Helps to integrate Innocode Community with a site.",

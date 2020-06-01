@@ -18,25 +18,29 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
 if (
     defined( 'INNOCODE_COMMUNITY_INSTANCE_URL' ) &&
-    defined( 'INNOCODE_COMMUNITY_CONSUMER_KEY' )
+    defined( 'INNOCODE_COMMUNITY_CONSUMER_TOKEN' )
 ) {
     $GLOBALS['innocode_community'] = new Community\Plugin(
         INNOCODE_COMMUNITY_INSTANCE_URL,
-        INNOCODE_COMMUNITY_CONSUMER_KEY
+        INNOCODE_COMMUNITY_CONSUMER_TOKEN
     );
+    $GLOBALS['innocode_community']->run();
 }
 
 if ( ! function_exists( 'innocode_community' ) ) {
     function innocode_community() {
+        /**
+         * @var Community\Plugin $innocode_community
+         */
         global $innocode_community;
 
         if ( is_null( $innocode_community ) ) {
             trigger_error(
-                'Missing required constant INNOCODE_COMMUNITY_INSTANCE_URL and/or INNOCODE_COMMUNITY_CONSUMER_KEY.',
+                'Missing required constant INNOCODE_COMMUNITY_INSTANCE_URL and/or INNOCODE_COMMUNITY_CONSUMER_TOKEN.',
                 E_USER_ERROR
             );
         }
 
-        return $innocode_community;
+        return $innocode_community->get_api();
     }
 }

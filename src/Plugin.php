@@ -9,27 +9,32 @@ namespace Innocode\Community;
 final class Plugin
 {
     /**
-     * @var string
+     * @var API
      */
-    private $instance_url;
-    /**
-     * @var string
-     */
-    private $consumer_key;
+    private $api;
 
     /**
      * Plugin constructor.
      * @param string $instance_url
-     * @param string $consumer_key
+     * @param string $consumer_token
      */
-    public function __construct( string $instance_url, string $consumer_key )
+    public function __construct( string $instance_url, string $consumer_token )
     {
-        $this->instance_url = $instance_url;
-        $this->consumer_key = $consumer_key;
+        $this->api = new API( $instance_url, $consumer_token );
+
     }
 
     public function run()
     {
 
+    }
+
+    /**
+     * Returns API object
+     * @return API
+     */
+    public function get_api() : API
+    {
+        return $this->api;
     }
 }
