@@ -46,7 +46,7 @@ innocode_community();
 ````
 
 **Note**: it will trigger an error in case when required constants
-INNOCODE_COMMUNITY_INSTANCE_URL and/or INNOCODE_COMMUNITY_CONSUMER_TOKEN are missing.
+`INNOCODE_COMMUNITY_INSTANCE_URL` and/or `INNOCODE_COMMUNITY_CONSUMER_TOKEN` are missing.
 
 ---
 
@@ -56,9 +56,9 @@ INNOCODE_COMMUNITY_INSTANCE_URL and/or INNOCODE_COMMUNITY_CONSUMER_TOKEN are mis
 innocode_community()->get_feed( int $id, array $query_args = [], array $args = [] );
 ````
 
-- $id - Feed ID.
-- $query_args - Query arguments.
-- $args - Request arguments. See [WP_Http::request()](https://developer.wordpress.org/reference/classes/WP_Http/request/)
+- `$id` - Feed ID.
+- `$query_args` - Query arguments.
+- `$args` - Request arguments. See [WP_Http::request()](https://developer.wordpress.org/reference/classes/WP_Http/request/)
 for more info.
 
 ---
@@ -73,8 +73,8 @@ innocode_community()->request( string $method, string $path, array $query_args =
 innocode_community()->get( string $path, array $query_args = [], array $args = [] );
 ````
 
-- $method - Request method. Accepts 'GET', 'POST', 'HEAD', 'PUT', 'DELETE', 'TRACE', 'OPTIONS', or 'PATCH'.
-- $path - Endpoint path.
-- $query_args - Query arguments.
-- $args - Request arguments. See [WP_Http::request()](https://developer.wordpress.org/reference/classes/WP_Http/request/)
+- `$method` - Request method. Accepts `GET`, `POST`, `HEAD`, `PUT`, `DELETE`, `TRACE`, `OPTIONS`, or `PATCH`.
+- `$path` - Endpoint path.
+- `$query_args` - Query arguments.
+- `$args` - Request arguments. See [WP_Http::request()](https://developer.wordpress.org/reference/classes/WP_Http/request/)
 for more details.
