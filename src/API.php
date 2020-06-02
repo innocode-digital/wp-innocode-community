@@ -13,12 +13,12 @@ class API
     const NAMESPACE = 'api/v2';
 
     /**
-     * Community instance URL
+     * Community instance URL.
      * @var string
      */
     private $instance_url;
     /**
-     * Community consumer token
+     * Community consumer token.
      * @var string
      */
     private $consumer_token;
@@ -35,7 +35,7 @@ class API
     }
 
     /**
-     * Returns Community instance URL
+     * Returns Community instance URL.
      * @return string
      */
     public function get_instance_url() : string
@@ -44,7 +44,7 @@ class API
     }
 
     /**
-     * Returns Community consumer token
+     * Returns Community consumer token.
      * @return string
      */
     public function get_consumer_token() : string
@@ -53,7 +53,7 @@ class API
     }
 
     /**
-     * Generates API URL for needed instance with consumer token
+     * Generates API URL for needed instance with consumer token.
      * @param string $path
      * @param array  $query_args
      * @return string
@@ -71,7 +71,7 @@ class API
     }
 
     /**
-     * Performs HTTP request to Community API
+     * Performs HTTP request to Community API.
      * @param string $method
      * @param string $path
      * @param array  $query_args
@@ -96,7 +96,7 @@ class API
     }
 
     /**
-     * Performs HTTP GET request to Community API
+     * Performs HTTP GET request to Community API.
      * @param string $path
      * @param array  $query_args
      * @param array  $args
@@ -108,7 +108,7 @@ class API
     }
 
     /**
-     * Retrieves Community feed
+     * Retrieves Community feed.
      * @param int   $id
      * @param array $query_args
      * @param array $args

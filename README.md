@@ -78,3 +78,15 @@ innocode_community()->get( string $path, array $query_args = [], array $args = [
 - `$query_args` - Query arguments.
 - `$args` - Request arguments. See [WP_Http::request()](https://developer.wordpress.org/reference/classes/WP_Http/request/)
 for more details.
+
+#### REST API
+
+| HTTP method | Endpoint | Function |
+|---|---|---|
+| GET | /innocode/v1/community/feeds/<id> | Retrieves a feed from Community through API. |
+
+#### Request Parameters
+
+| Name | Type | Description |
+| --- | --- | --- |
+| id | int | Feed ID. Required |
