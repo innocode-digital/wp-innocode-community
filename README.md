@@ -83,7 +83,7 @@ for more details.
 
 | HTTP method | Endpoint | Function |
 |---|---|---|
-| GET | /innocode/v1/community/feeds/<id> | Retrieves a feed from Community through API. |
+| GET | `/innocode/v1/community/feeds/<id>` | Retrieves a feed from Community through API. |
 
 #### Request Parameters
 
