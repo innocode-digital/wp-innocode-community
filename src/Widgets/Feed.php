@@ -45,7 +45,7 @@ class Feed extends WP_Widget
         }
 
         printf(
-            "<div id=\"%s-root\" class=\"innocode_community_feed\"></div>
+            "<div id=\"%s-widget\" class=\"innocode_community_feed\"></div>
 <script>
 window.innocodeCommunity = window.innocodeCommunity || {};
 window.innocodeCommunity.widgets = window.innocodeCommunity.widgets || {};

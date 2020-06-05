@@ -1,6 +1,6 @@
 {
   "name": "innocode-digital/wp-innocode-community",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "wordpress-muplugin",
   "license": "GPL-2.0+",
   "require": {

@@ -26,6 +26,11 @@ final class Plugin
      * @var WP_Widget[]
      */
     private $widgets = [];
+    /**
+     * Shortcodes collection.
+     * @var array
+     */
+    private $shortcodes = [];
 
     /**
      * Plugin constructor.
@@ -37,6 +42,7 @@ final class Plugin
         $this->api = new API( $instance_url, $consumer_token );
         $this->rest_controller = new RESTController();
         $this->widgets['feed'] = new Widgets\Feed();
+        $this->shortcodes['feed'] = new Shortcodes\Feed();
     }
 
     /**
@@ -46,6 +52,7 @@ final class Plugin
     {
         add_action( 'rest_api_init', [ $this, 'register_rest_routes' ] );
         add_action( 'widgets_init', [ $this, 'register_widgets' ] );
+        add_action( 'init', [ $this, 'register_shortcodes' ] );
     }
 
     /**
@@ -76,6 +83,15 @@ final class Plugin
     }
 
     /**
+     * Returns shortcodes collection.
+     * @return array
+     */
+    public function get_shortcodes() : array
+    {
+        return $this->shortcodes;
+    }
+
+    /**
      * Adds routes.
      */
     public function register_rest_routes()
@@ -90,6 +106,16 @@ final class Plugin
     {
         foreach ( $this->get_widgets() as $widget ) {
             register_widget( $widget );
+        }
+    }
+
+    /**
+     * Adds shortcodes.
+     */
+    public function register_shortcodes()
+    {
+        foreach ( $this->get_shortcodes() as $shortcode ) {
+            add_shortcode( $shortcode::TAG, $shortcode );
         }
     }
 }

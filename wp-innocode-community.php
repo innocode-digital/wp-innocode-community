@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Community
  * Description: Helps to integrate <a href="https://innocode.com/product/community/">Innocode Community</a> with a site.
- * Version: 0.2.0
+ * Version: 0.3.0
  * Author: Innocode
  * Author URI: https://innocode.com
  * Tested up to: 5.4.1
